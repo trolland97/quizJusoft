@@ -23,7 +23,7 @@ export class SecondquizComponent implements OnInit {
   }
 
   getSecondQuestions() {
-    this.quiz.getQuestion()
+    this.quiz.getSecondQuestion()
       .subscribe(questions => {
         this.questions = questions;
         this.generateAnswers();

@@ -16,7 +16,7 @@ export class FirstquizComponent implements OnInit {
   public selectedAnswer: number = null;
   public points: number = 0;
 
-  constructor(private quiz: QuizServiceService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private quiz: QuizServiceService, private router: Router) { }
 
   ngOnInit(): void {
     this.getQuestions();
