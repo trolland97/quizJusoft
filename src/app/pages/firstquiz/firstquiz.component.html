@@ -1,1 +1,20 @@
-<p>works</p>
+<section>
+    <div fxLayout fxLayoutAlign="space-between flex-start">
+        <div fxLayout="column">
+            <span>Pontszám: {{points}}</span>
+        </div>
+    </div>
+    <div class="container" fxLayout="column" fxLayoutAlign="center flex-start" fxLayoutGap="1em">
+        <h1 [innerHTML]="questions[index].question"></h1>
+        <mat-radio-group [(ngModel)]="selectedAnswer" fxLayout="column" fxLayoutGap=".5em">
+            <mat-radio-button value="0"><span [innerHTML]="answers[0]"></span></mat-radio-button>
+            <mat-radio-button value="1"><span [innerHTML]="answers[1]"></span></mat-radio-button>
+            <mat-radio-button *ngIf="answers[2]" value="2"><span [innerHTML]="answers[2]"></span></mat-radio-button>
+            <mat-radio-button *ngIf="answers[2]" value="3"><span [innerHTML]="answers[3]"></span></mat-radio-button>
+        </mat-radio-group>
+        <button *ngIf="index < questions.length - 1" mat-raised-button color="primary"
+            [disabled]="selectedAnswer == null" (click)="next()">Következő</button>
+        <button *ngIf="index == questions.length - 1" mat-raised-button color="primary"
+            [disabled]="selectedAnswer == null" (click)="finish()">Befejezés</button>
+    </div>
+</section>

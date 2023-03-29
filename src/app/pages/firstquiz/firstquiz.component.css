@@ -1,0 +1,12 @@
+section {
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: fit-content;
+    margin: 0 auto;
+}

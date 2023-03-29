@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Quiz Jusoft';
+  constructor() {   
+    window.onbeforeunload = function() {
+      localStorage.clear();
+      return '';
+    };
+  }
 }

@@ -1,4 +1,8 @@
-<div class="text-center">
-    <h1>Pontjaidat sikeresen nulláztad!</h1>
-    <p>Sok sikert a következő kvíz kitöltéséhez!</p>
+<div class="text-center mt-5">
+    <button (click)="resetScore()">Pontjaid nullázása</button>
+    <div [hidden]="descHidden" class="mt-3">
+        <h1>Pontjaidat sikeresen nulláztad!</h1>
+        <p>Sok sikert a következő kvíz kitöltéséhez!</p>
+    </div>
+
 </div>

@@ -16,5 +16,12 @@ export class NavbarComponent {
     this.menuHidden= !this.menuHidden;
     this.nameHidden =!this.nameHidden;
     this.playerHidden =!this.playerHidden;
+    if(val == '') {
+      alert('A folytatáshoz meg kell adnod a neved!');
+      window.location.reload();
+    }
   }
-}
+
+ }
+  
+

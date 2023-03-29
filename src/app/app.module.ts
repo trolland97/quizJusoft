@@ -9,6 +9,10 @@ import { ResetComponent } from './pages/reset/reset.component';
 import { FirstquizComponent } from './pages/firstquiz/firstquiz.component';
 import { SecondquizComponent } from './pages/secondquiz/secondquiz.component';
 import { PointsComponent } from './pages/points/points.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { PointsComponent } from './pages/points/points.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatRadioModule,
+    FormsModule,
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
