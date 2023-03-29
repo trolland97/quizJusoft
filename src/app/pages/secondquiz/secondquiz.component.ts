@@ -20,13 +20,15 @@ export class SecondquizComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSecondQuestions();
-    this.generateAnswers();
   }
 
   getSecondQuestions() {
-    this.quiz.getSecondQuestion()
-      .subscribe(questions => this.questions = questions);
-  }
+    this.quiz.getQuestion()
+      .subscribe(questions => {
+        this.questions = questions;
+        this.generateAnswers();
+      });
+}
 
   generateAnswers() {
     this.answers = [];

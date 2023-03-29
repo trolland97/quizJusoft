@@ -4,7 +4,8 @@
             <span>Pontszám: {{points}}</span>
         </div>
     </div>
-    <div class="container" fxLayout="column" fxLayoutAlign="center flex-start" fxLayoutGap="1em">
+    <div class="container" *ngIf="questions != null && questions.length != 0 && answers != null && answers.length != 0"
+        fxLayout="column" fxLayoutAlign="center flex-start" fxLayoutGap="1em">
         <h1 [innerHTML]="questions[index].question"></h1>
         <mat-radio-group [(ngModel)]="selectedAnswer" fxLayout="column" fxLayoutGap=".5em">
             <mat-radio-button value="0"><span [innerHTML]="answers[0]"></span></mat-radio-button>
